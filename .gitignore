@@ -1,0 +1,5 @@
+req.txt
+Dockerfile
+crypto-dashboard-app/docker-compose.yml
+data/
+env/
