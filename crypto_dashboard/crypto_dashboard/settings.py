@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+e@9@bq=(h+2n(mg5r7rh_19n%km($=)h9k0utr4297=hfld@c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -68,6 +68,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'crypto_dashboard.wsgi.application'
+
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'test_db',
+    'USER': 'root',
+    'PASSWORD': 'root',
+    'HOST': '192.168.0.2',
+    'PORT': '5432',
+  }
+}
 
 
 # Database
