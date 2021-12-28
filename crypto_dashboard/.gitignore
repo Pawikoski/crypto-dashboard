@@ -1,6 +1,0 @@
-req.txt
-Dockerfile
-docker-compose.yml
-data/
-env/
-db.sqlite3

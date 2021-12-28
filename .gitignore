@@ -1,0 +1,4 @@
+crypto_dashboard/docker-compose.yml
+crypto_dashboard/Dockerfile
+crypto_dashboard/db.sqlite3
+
