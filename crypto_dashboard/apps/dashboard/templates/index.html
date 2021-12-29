@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        body {
+            background-color: #222;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $.ajax({
+            type: 'GET',
+            url: 'api',
+            success: function(response){
+                console.log(response)
+                spans = document.querySelectorAll("span")
+                spans[0].innerHTML = response['bitcoin']['pln'] + " PLN"
+                spans[1].innerHTML = response['bitcoin']['usd'] + " USD"
+                spans[2].innerHTML = response['bitcoin']['eur'] + " EUR"
+                spans[3].innerHTML = response['ethereum']['pln'] + " PLN"
+                spans[4].innerHTML = response['ethereum']['usd'] + " USD"
+                spans[5].innerHTML = response['ethereum']['eur'] + " EUR"
+                spans[6].innerHTML = response['litecoin']['pln'] + " PLN"
+                spans[7].innerHTML = response['ethereum']['usd'] + " USD"
+                spans[8].innerHTML = response['ethereum']['eur'] + " EUR"
+
+
+            },
+            error: function(error) {
+                console.log(error)
+            }
+        })
+        })
+        
+
+    </script>
+
+    BTC: <span>Loading...</span> | <span>Loading...</span> | <span>Loading...</span><br>
+    ETH: <span>Loading...</span> | <span>Loading...</span> | <span>Loading...</span><br>
+    LTC: <span>Loading...</span> | <span>Loading...</span> | <span>Loading...</span><br>
+</body>
+</html>

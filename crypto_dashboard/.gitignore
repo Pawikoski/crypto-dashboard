@@ -1,0 +1,6 @@
+/data
+/dashboard/__pycache__
+db.sqlite3
+Dockerfile
+docker-compose.yml
+req.txt
